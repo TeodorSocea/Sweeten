@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Sweeten",
+    "slug": "Sweeten",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/sweeten_logo.png",
+    "splash": {
+      "image": "./assets/sweeten_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#d4062c"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/sweeten_logo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ts.sweeten"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": ""
+  }
+}
