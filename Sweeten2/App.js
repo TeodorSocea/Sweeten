@@ -4,7 +4,6 @@ import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { AuthContext } from "./components/context";
 import { AuthScreen } from "./components/AuthScreen";
 import { Explore } from "./components/Explore";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import * as firebase from "firebase";
 import getCreds from "./creds/creds";

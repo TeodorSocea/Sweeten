@@ -21,8 +21,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/sweeten_logo.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/ic_launcher_foreground.png",
+        "backgroundColor": "#DC5BC5"
       },
       "package": "com.ts.sweeten"
     },

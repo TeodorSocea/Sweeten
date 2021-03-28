@@ -137,7 +137,9 @@ export const AuthScreen = (props) => {
             style={styles.button}
           >
             <View>
-              <Text>Create Account</Text>
+              <Text style={{ fontWeight: "bold", fontSize: height * 0.02 }}>
+                Create Account
+              </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -224,7 +226,9 @@ export const AuthScreen = (props) => {
             style={styles.button}
           >
             <View>
-              <Text>Log into account</Text>
+              <Text style={{ fontWeight: "bold", fontSize: height * 0.02 }}>
+                Log into account
+              </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
