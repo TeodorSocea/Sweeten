@@ -16,7 +16,7 @@ import {
   faEyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "./context";
-
+import { validator } from "./validator";
 export const AuthScreen = (props) => {
   const [data, setData] = React.useState({
     signup: true,
@@ -72,7 +72,11 @@ export const AuthScreen = (props) => {
                 style={{ marginRight: width * 0.02 }}
               />
               <TextInput
-                placeholder="Your email adress"
+                placeholder={
+                  validator.emailFree == true
+                    ? "Your email adress"
+                    : "Email already exists"
+                }
                 style={styles.input}
                 onChangeText={(text) => {
                   setData({ ...data, email: text });

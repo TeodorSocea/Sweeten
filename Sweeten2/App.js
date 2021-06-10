@@ -11,15 +11,9 @@ import getCreds from "./creds/creds";
 //firebase.initializeApp(getCreds());
 
 export default function App() {
-  const initialLoginState = {
-    isLoading: true,
-    userName: null,
-    userToken: null,
-  };
-
   const [initializing, setInitializing] = React.useState(true);
   const [user, setUser] = React.useState();
-
+  const [error, setError] = React.useState();
   function onAuthStateChanged(user) {
     setUser(user);
     if (initializing) setInitializing(false);
@@ -30,22 +24,26 @@ export default function App() {
       firebase
         .auth()
         .signInWithEmailAndPassword(userName, password)
-        .catch((error) => console.log(error.code));
+        .catch((error) => setError(error.code));
     },
     signOut: async () => {
       firebase
         .auth()
         .signOut()
         .catch((error) => {
-          console.log(error.code);
+          setError(error.code);
         });
     },
     signUp: async (userName, password) => {
       firebase
         .auth()
         .createUserWithEmailAndPassword(userName, password)
-        .catch((error) => console.log(error.code));
+        .catch((error) => {
+          setError(error.code);
+          console.log(error);
+        });
     },
+    err: error,
   }));
 
   useEffect(() => {
